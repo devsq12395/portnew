@@ -44,7 +44,7 @@ const AboutMe = () => {
           <a href="https://www.linkedin.com/in/clydongamboa/" className="text-gray-500 hover:text-gray-900">
             <FontAwesomeIcon icon={faLinkedin} size="2x" />
           </a>
-          <a href="https://gitlab.com/uplift-code-camp/students/batch-19/clydon-gamboa" className="text-gray-500 hover:text-gray-900">
+          <a href="https://github.com/devsq12395" className="text-gray-500 hover:text-gray-900">
             <FontAwesomeIcon icon={faGithub} size="2x" />
           </a>
           <a href="https://www.facebook.com/clydon.gamboa/" className="text-gray-500 hover:text-gray-900">
@@ -53,7 +53,7 @@ const AboutMe = () => {
         </div>
         <div className="mt-4">
           <a
-            href="https://www.dropbox.com/scl/fi/kiw3ikwjssmidoqvfy1zj/resume.docx?rlkey=5xpe334rh4omstdev7o4pyknv&dl=1"
+            href="https://www.dropbox.com/scl/fi/9krm3e7xjlgdtfmq7d04c/Gamboa-Clydon-CV.pdf?rlkey=zboe4sr2kr7l85tamysufu1kv&e=1&st=hhz69y2i&dl=1"
             className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700"
           >
             Download CV
