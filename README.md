@@ -1,4 +1,4 @@
-# Clydon's Portfolio
+# Portfolio
 
 ## Vercel Link:
 https://clydon-portfolio.vercel.app/
