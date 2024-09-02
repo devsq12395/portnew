@@ -6,7 +6,7 @@ import MyContext from "../../MyContext";
 const projectsData = [
   {
     title: 'HTML Poker with Gemini AI',
-    description: "This website allows you to practice playing poker with Google's Gemini AI. The game is integrated with the Gemini AI API, enabling real-time access to the AI for an enhanced poker experience. I developed all the poker logic, including the hand value calculator and comparison, using JavaScript ES6. The code is designed to be very versatile and clean, making it effortless to modify the game, such as by adding more opponents at the table.",
+    description: "This website allows you to play poker with Google's Gemini AI. The game is integrated with the Gemini AI API, enabling real-time access to the AI. I developed all the poker logic, including the hand value calculator and comparison, using JavaScript ES6. The code is designed to be very versatile and clean, making it easy to modify the game, like adding more opponents at the table.",
     imageUrl: 'https://res.cloudinary.com/dpzxu1ykr/image/upload/v1721030442/Portfolio/website-01_hxyjoo.jpg',
     techStack: ['HTML', 'CSS', 'JavaScript', 'API Integration with Gemini AI'],
     screenshots: [
@@ -19,7 +19,7 @@ const projectsData = [
   },
   {
     title: 'Ideahub Zeta',
-    description: `Ideahub Zeta is a dynamic social forum platform developed with Vite+React for a fast and responsive user interface, and Node.js with MongoDB for a robust backend. It allows users to share their ideas and engage in discussions across a wide array of topics. Threads are organized into distinct categories for easy navigation and focused conversations. The application leverages RESTful APIs for efficient data management and provides real-time updates to users through WebSockets.`,
+    description: `Social forum platform developed with Vite+React, and Node.js with MongoDB for backend. It allows users to share their ideas and engage in discussions across a wide array of topics. Threads are organized into categories for focused conversations. The application uses RESTful APIs for efficient data management and provides real-time updates to users through WebSockets.`,
     imageUrl: 'https://res.cloudinary.com/dpzxu1ykr/image/upload/v1721041107/Portfolio/site3-01_p1gzlu.png',
     techStack: ['Vite+React', 'Node.js', 'MongoDB'],
     screenshots: [
