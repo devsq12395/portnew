@@ -15,7 +15,7 @@ const projectsData = [
       'https://res.cloudinary.com/dpzxu1ykr/image/upload/v1721030442/Portfolio/website-01_hxyjoo.jpg',
     ],
     websiteUrl: 'https://gemini-poker.vercel.app/',
-    repoUrl: 'https://gitlab.com/uplift-code-camp/students/batch-19/clydon-gamboa/projects/-/tree/main/p2-js-api-app',
+    repoUrl: '',
   },
   {
     title: 'Ideahub Zeta',
@@ -28,7 +28,7 @@ const projectsData = [
       'https://res.cloudinary.com/dpzxu1ykr/image/upload/v1721041107/Portfolio/site3-03_obs5hz.png',
     ],
     websiteUrl: 'https://ideahub-zeta.vercel.app/',
-    repoUrl: 'https://gitlab.com/uplift-code-camp/students/batch-19/clydon-gamboa/projects/-/tree/main/p4-node-app',
+    repoUrl: '',
   },
   {
     title: 'Credence',
@@ -40,7 +40,7 @@ const projectsData = [
       'https://res.cloudinary.com/dpzxu1ykr/image/upload/v1721043146/Portfolio/site4-02_sv9jyn.png',
     ],
     websiteUrl: 'https://uplift-credence.netlify.app/',
-    repoUrl: 'https://gitlab.com/uplift-code-camp/students/batch-19/group-5/fs-mern-app',
+    repoUrl: '',
   },
   {
     title: 'Project Management App',
@@ -53,7 +53,7 @@ const projectsData = [
       'https://res.cloudinary.com/dpzxu1ykr/image/upload/v1721040768/Portfolio/site2-01_ymaxrs.png',
     ],
     websiteUrl: 'https://proj-management-app-clydon.vercel.app/',
-    repoUrl: 'https://gitlab.com/uplift-code-camp/students/batch-19/clydon-gamboa/projects/-/tree/main/p3-react-app',
+    repoUrl: '',
   },
 ];
 

@@ -162,7 +162,7 @@ const Contact = () => {
               </div>
               <div className="flex items-center">
                 <FontAwesomeIcon icon={faGithub} size="2x" className="mr-2 text-gray-500" />
-                <a href="https://gitlab.com/uplift-code-camp/students/batch-19/clydon-gamboa" className="text-lg md:text-xl text-gray-500 hover:text-gray-900">GitHub</a>
+                <a href="" className="text-lg md:text-xl text-gray-500 hover:text-gray-900">GitHub</a>
               </div>
             </div>
           </motion.div>

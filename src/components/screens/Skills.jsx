@@ -47,8 +47,7 @@ const Skills = () => {
             <p ref={el => textRefs.current[1] = el} className="mt-4 text-lg">
               I started my web development journey delving into HTML and CSS.
               As I progressed, I ventured into JavaScript, enhancing my websites with interactivity and dynamic content.
-              I joined Uplift Code Camp to further enhance my skills by learning in-demand skills and technologies like ReactJS.
-              Now I have the set of skills needed to create any website you wish.
+              I am also skilled in using Front-end technologies like ReactJS and other kinds of backend technologies.
             </p>
           </motion.div>
           <div className="border-l border-gray-300 mx-4 hidden lg:block"></div>
