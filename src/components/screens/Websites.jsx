@@ -14,6 +14,18 @@ const projectsData = [
       'https://res.cloudinary.com/dpzxu1ykr/image/upload/v1721030442/Portfolio/website-04_who0a0.jpg',
       'https://res.cloudinary.com/dpzxu1ykr/image/upload/v1721030442/Portfolio/website-01_hxyjoo.jpg',
     ],
+    features: [
+      {
+        imgUrl: 'https://res.cloudinary.com/dpzxu1ykr/image/upload/v1721030442/Portfolio/website-01_hxyjoo.jpg',
+        title: 'Seemless AI Communication and Processing',
+        description: 'The algorithm is designed to communicate with Gemini AI in a natural and engaging way, making the game feel like a real game. The logic is also programmed to effectively process Gemini AI responses.',
+      },
+      {
+        imgUrl: 'https://res.cloudinary.com/dpzxu1ykr/image/upload/v1721030442/Portfolio/website-01_hxyjoo.jpg',
+        title: 'Self-Made Poker Hand Value Calculator and Comparison',
+        description: 'I have searched the internet for a poker hand value calculator and comparison, but none were accurate enough and most have problems which leads to inaccuracies. I have created my own that uses a simple algorithm, which is very accurate and easy to use.',
+      },
+    ],
     websiteUrl: 'https://gemini-poker.vercel.app/',
     repoUrl: '',
   },
@@ -85,17 +97,21 @@ const Websites = () => {
       backgroundImage: "url('https://res.cloudinary.com/dpzxu1ykr/image/upload/v1722672401/sl_101121_46080_04_enju9p.jpg')",
       backgroundSize: 'cover',
       backgroundPosition: 'center',
-      backgroundRepeat: 'no-repeat'
+      backgroundRepeat: 'no-repeat',
+      height: '100vh',
+      overflow: 'auto' // Enable scrolling
     }}>
       <motion.div
-        className="relative h-full w-full p-8 flex"
+        className="relative h-full w-full p-8 flex gap-4"
         style={{
-          height: '100vh', overflowY: 'auto',
+          overflow: 'auto' // Enable scrolling
         }}
         initial="hidden"
         animate={animate === 1 ? 'visible' : 'hidden'}
         variants={containerVariants}
       >
+        
+        {/* Selector */}
         <div className="w-full flex flex-col md:flex-row overflow-y-auto">
           <div className="md:w-1/4 p-4 border-r border-gray-300" style={{ backgroundColor: '#EEE' }}>
             <h2 className="text-3xl font-bold mb-2 text-black">Websites</h2>
@@ -115,25 +131,50 @@ const Websites = () => {
               ))}
             </div>
           </div>
+          
+          {/* Main Body */}
           <motion.div
-            className="md:w-3/4 p-4 flex flex-col space-y-4 overflow-y-auto"
+            className="md:w-3/4 p-4 flex flex-col space-y-4 overflow-y-auto border border-blue-300 bg-blue-200 bg-opacity-50"
             initial="hidden"
             animate={animate === 1 ? 'visible' : 'hidden'}
             variants={contentVariants}
           >
             <AnimatePresence mode="wait">
               <motion.div
+                className="flex flex-col space-y-4 gap-4"
                 key={selectedProjectIndex}
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 50 }}
                 transition={{ duration: 0.5 }}
               >
-                <h2 className="text-3xl font-bold">{selectedProject.title}</h2>
+                {/* Description */}
+                <h2 className="text-5xl text-center">{selectedProject.title}</h2>
                 <p className="text-base md:text-lg">{selectedProject.description}</p>
                 <div className="text-base md:text-lg">
                   <strong>Tech Stack:</strong> {selectedProject.techStack.join(', ')}
                 </div>
+
+                <hr className="mx-auto w-[90%] border-t-2 border-gray-500 my-4" />
+                
+                {/* Features */}
+                <h2 className="text-3xl font-bold">Features</h2>
+                <div className="space-y-4">
+                  {selectedProject.features.map((feature, index) => (
+                    <div key={index} className="flex">
+                      <img src={feature.imgUrl} alt={feature.title} className="w-1/3 h-auto object-cover rounded-md mr-4" />
+                      <div className="flex flex-col justify-center">
+                        <h3 className="text-xl font-bold">{feature.title}</h3>
+                        <p className="text-base">{feature.description}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                <hr className="mx-auto w-[90%] border-t-2 border-gray-500 my-4" />
+
+                {/* Screenshots */}
+                <h2 className="text-3xl font-bold">Screenshots</h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   {selectedProject.screenshots.length > 0 &&
                     selectedProject.screenshots.map((screenshot, index) => (
@@ -145,7 +186,11 @@ const Websites = () => {
                       />
                     ))}
                 </div>
-                <div className="flex space-x-4">
+
+                <hr className="mx-auto w-[90%] border-t-2 border-gray-500 my-4" />
+                
+                {/* Links */}
+                <div className="flex space-x-4 mx-auto">
                   <p>Links: </p>
                   <a
                     href={selectedProject.websiteUrl}
