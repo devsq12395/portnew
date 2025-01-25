@@ -39,6 +39,18 @@ const projectsData = [
       'https://res.cloudinary.com/dpzxu1ykr/image/upload/v1721041107/Portfolio/site3-01_p1gzlu.png',
       'https://res.cloudinary.com/dpzxu1ykr/image/upload/v1721041107/Portfolio/site3-03_obs5hz.png',
     ],
+    features: [
+      {
+        imgUrl: 'https://res.cloudinary.com/dpzxu1ykr/image/upload/v1721030442/Portfolio/website-01_hxyjoo.jpg',
+        title: 'Seemless AI Communication and Processing',
+        description: 'The algorithm is designed to communicate with Gemini AI in a natural and engaging way, making the game feel like a real game. The logic is also programmed to effectively process Gemini AI responses.',
+      },
+      {
+        imgUrl: 'https://res.cloudinary.com/dpzxu1ykr/image/upload/v1721030442/Portfolio/website-01_hxyjoo.jpg',
+        title: 'Self-Made Poker Hand Value Calculator and Comparison',
+        description: 'I have searched the internet for a poker hand value calculator and comparison, but none were accurate enough and most have problems which leads to inaccuracies. I have created my own that uses a simple algorithm, which is very accurate and easy to use.',
+      },
+    ],
     websiteUrl: 'https://ideahub-zeta.vercel.app/',
     repoUrl: '',
   },
@@ -50,6 +62,18 @@ const projectsData = [
     screenshots: [
       'https://res.cloudinary.com/dpzxu1ykr/image/upload/v1721043147/Portfolio/site4-01_syeocj.png',
       'https://res.cloudinary.com/dpzxu1ykr/image/upload/v1721043146/Portfolio/site4-02_sv9jyn.png',
+    ],
+    features: [
+      {
+        imgUrl: 'https://res.cloudinary.com/dpzxu1ykr/image/upload/v1721030442/Portfolio/website-01_hxyjoo.jpg',
+        title: 'Seemless AI Communication and Processing',
+        description: 'The algorithm is designed to communicate with Gemini AI in a natural and engaging way, making the game feel like a real game. The logic is also programmed to effectively process Gemini AI responses.',
+      },
+      {
+        imgUrl: 'https://res.cloudinary.com/dpzxu1ykr/image/upload/v1721030442/Portfolio/website-01_hxyjoo.jpg',
+        title: 'Self-Made Poker Hand Value Calculator and Comparison',
+        description: 'I have searched the internet for a poker hand value calculator and comparison, but none were accurate enough and most have problems which leads to inaccuracies. I have created my own that uses a simple algorithm, which is very accurate and easy to use.',
+      },
     ],
     websiteUrl: 'https://uplift-credence.netlify.app/',
     repoUrl: '',
@@ -63,6 +87,18 @@ const projectsData = [
       'https://res.cloudinary.com/dpzxu1ykr/image/upload/v1721040768/Portfolio/site2-02_lu33hu.png',
       'https://res.cloudinary.com/dpzxu1ykr/image/upload/v1721040768/Portfolio/site2-02_lu33hu.png',
       'https://res.cloudinary.com/dpzxu1ykr/image/upload/v1721040768/Portfolio/site2-01_ymaxrs.png',
+    ],
+    features: [
+      {
+        imgUrl: 'https://res.cloudinary.com/dpzxu1ykr/image/upload/v1721030442/Portfolio/website-01_hxyjoo.jpg',
+        title: 'Seemless AI Communication and Processing',
+        description: 'The algorithm is designed to communicate with Gemini AI in a natural and engaging way, making the game feel like a real game. The logic is also programmed to effectively process Gemini AI responses.',
+      },
+      {
+        imgUrl: 'https://res.cloudinary.com/dpzxu1ykr/image/upload/v1721030442/Portfolio/website-01_hxyjoo.jpg',
+        title: 'Self-Made Poker Hand Value Calculator and Comparison',
+        description: 'I have searched the internet for a poker hand value calculator and comparison, but none were accurate enough and most have problems which leads to inaccuracies. I have created my own that uses a simple algorithm, which is very accurate and easy to use.',
+      },
     ],
     websiteUrl: 'https://proj-management-app-clydon.vercel.app/',
     repoUrl: '',
@@ -141,7 +177,7 @@ const Websites = () => {
           >
             <AnimatePresence mode="wait">
               <motion.div
-                className="flex flex-col space-y-4 gap-4"
+                className="flex flex-col space-y-4 gap-4 h-[2000px] min-h-[2000px] overflow-y-auto"
                 key={selectedProjectIndex}
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
