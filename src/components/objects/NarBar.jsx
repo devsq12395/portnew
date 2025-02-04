@@ -80,7 +80,7 @@ const NavBar = () => {
 
     return (
         <div className="relative flex justify-center items-center w-full">
-            <nav ref={navRef} className="fixed top-0 w-full flex justify-center bg-gray-800 text-white px-2 md:px-8 py-4 h-16 gap-x-4 md:gap-x-10 rounded-b-lg">
+            <nav ref={navRef} className="fixed top-0 w-full flex justify-center bg-gradient-to-r from-blue-800 via-0055aa to-blue-800 text-white px-2 md:px-8 py-4 h-16 gap-x-4 md:gap-x-10">
                 {tabs.map((tab, index) => (
                     <NavBarBtn 
                         key={tab} 
