@@ -7,6 +7,7 @@ const Websites = () => {
   const { animate } = useContext(MyContext);
   const [selectedProjectIndex, setSelectedProjectIndex] = useState(0);
   const [currentFeaturePage, setCurrentFeaturePage] = useState(0);
+  const [direction, setDirection] = useState('next');
   const featuresPerPage = 1;
   const selectedProject = projectsData[selectedProjectIndex];
 
@@ -26,6 +27,17 @@ const Websites = () => {
       y: 0,
       transition: { duration: 0.5, ease: [0.42, 0, 0.58, 1] },
     },
+  };
+
+  const variants = {
+    enter: (direction) => ({
+      x: direction === 'next' ? 100 : -100,
+      opacity: 0,
+    }),
+    animate: {
+      x: 0,
+      opacity: 1,
+    }
   };
 
   return (
@@ -114,23 +126,38 @@ const Websites = () => {
                 {/* Features */}
                 <h2 className="text-3xl font-bold">Features</h2>
                 <div className="space-y-4">
-                  {selectedProject.features
-                    .slice(currentFeaturePage * featuresPerPage, (currentFeaturePage + 1) * featuresPerPage)
-                    .map((feature, index) => (
-                      <div key={index} className="flex flex-col items-center">
-                        <img src={feature.imgUrl} alt={feature.title} className="w-[75%] h-auto object-cover rounded-md mb-6" />
-                        <div className="flex flex-col text-center">
-                          <h3 className="text-2xl font-bold mb-3">{feature.title}</h3>
-                          <p className="text-lg whitespace-pre-line">{feature.description}</p>
-                        </div>
-                      </div>
-                    ))}
+                  <AnimatePresence initial={false} mode="wait">
+                    {selectedProject.features
+                      .slice(currentFeaturePage * featuresPerPage, (currentFeaturePage + 1) * featuresPerPage)
+                      .map((feature, index) => (
+                        <motion.div
+                          key={`${selectedProjectIndex}-${currentFeaturePage}`}
+                          className="flex flex-col items-center"
+                          style={{ minHeight: '500px' }} 
+                          custom={direction}
+                          variants={variants}
+                          initial="enter"
+                          animate="animate"
+                          exit="enter"
+                          transition={{ duration: 0.5 }}
+                        >
+                          <img src={feature.imgUrl} alt={feature.title} className="w-[75%] h-auto object-cover rounded-md mb-6" />
+                          <div className="flex flex-col text-center">
+                            <h3 className="text-2xl font-bold mb-3">{feature.title}</h3>
+                            <p className="text-lg whitespace-pre-line">{feature.description}</p>
+                          </div>
+                        </motion.div>
+                      ))}
+                  </AnimatePresence>
                   
                   {/* Pagination Controls */}
                   <div className="flex flex-col items-center space-y-4 mt-6">
                     <div className="flex justify-center space-x-4">
                       <button
-                        onClick={() => setCurrentFeaturePage(prev => Math.max(0, prev - 1))}
+                        onClick={() => {
+                          setDirection('prev');
+                          setCurrentFeaturePage(prev => Math.max(0, prev - 1));
+                        }}
                         disabled={currentFeaturePage === 0}
                         className={`px-6 py-2 rounded-md transition-colors ${
                           currentFeaturePage === 0
@@ -142,9 +169,12 @@ const Websites = () => {
                       </button>
 
                       <button
-                        onClick={() => setCurrentFeaturePage(prev => 
-                          Math.min(Math.ceil(selectedProject.features.length / featuresPerPage) - 1, prev + 1)
-                        )}
+                        onClick={() => {
+                          setDirection('next');
+                          setCurrentFeaturePage(prev => 
+                            Math.min(Math.ceil(selectedProject.features.length / featuresPerPage) - 1, prev + 1)
+                          );
+                        }}
                         disabled={currentFeaturePage >= Math.ceil(selectedProject.features.length / featuresPerPage) - 1}
                         className={`px-6 py-2 rounded-md transition-colors ${
                           currentFeaturePage >= Math.ceil(selectedProject.features.length / featuresPerPage) - 1
