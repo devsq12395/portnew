@@ -24,7 +24,7 @@ const AboutMe = () => {
       initial="hidden"
       animate={animate === 1 ? 'visible' : 'hidden'}
       style={{
-        backgroundImage: "url('https://res.cloudinary.com/dpzxu1ykr/image/upload/v1722672401/sl_101121_46080_04_enju9p.jpg')",
+        backgroundImage: "url('https://res.cloudinary.com/dpzxu1ykr/image/upload/v1738605498/fuhaagowuetuhqxeqgua.jpg')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'

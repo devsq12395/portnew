@@ -73,7 +73,7 @@ const Websites = () => {
                   }`}
                   onClick={() => setSelectedProjectIndex(index)}
                 >
-                  <img src={project.imageUrl} alt={project.title} className="w-16 h-16 object-cover rounded-md mr-4" />
+                  <img src={project.imageUrl} alt={project.title} className="w-16 h-20 object-cover rounded-md mr-4" />
                   <h3 className="text-base md:text-lg font-semibold text-black">{project.title}</h3>
                 </div>
               ))}
@@ -96,7 +96,7 @@ const Websites = () => {
                 exit={{ opacity: 0, y: 50 }}
                 transition={{ duration: 0.5 }}
               >
-                <h2 className="text-5xl text-center">{selectedProject.title}</h2>
+                <h2 className="text-5xl text-center p-2">{selectedProject.title}</h2>
                 <hr className="mx-auto w-[90%] border-t-2 border-gray-500 my-4" />
 
                 {/* Description */}
@@ -138,7 +138,6 @@ const Websites = () => {
                           variants={variants}
                           initial="enter"
                           animate="animate"
-                          exit="enter"
                           transition={{ duration: 0.5 }}
                         >
                           <img src={feature.imgUrl} alt={feature.title} className="w-[75%] h-auto object-cover rounded-md mb-6" />
